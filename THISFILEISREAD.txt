@@ -1,0 +1,45 @@
+M:N is the name of the window (The text at the top of the window)
+M:B is the background color in the renderer
+M:V is a 3D vertex
+M:F is a face
+M:C is a color, all faces between one color and the next will be the starting color
+M:M is a message
+M:M, C, B, and N are not required but the default values may make it less appealing, especially in the case of color
+M:The following is an example where the object being rendered is a cube where we define 8 points and 12 faces in pairs with each pair painted 1 of 6 colors
+
+
+N:Cube made from 12 Tris
+B:128:128:255
+
+V:1:1:1
+V:1:1:-1
+V:1:-1:1
+V:1:-1:-1
+V:-1:1:1
+V:-1:1:-1
+V:-1:-1:1
+V:-1:-1:-1
+
+C:255:255:255
+F:1:2:4
+F:1:3:4
+
+C:128:128:128
+F:5:6:8
+F:5:7:8
+
+C:128:255:128
+F:1:5:7
+F:1:3:7
+
+C:0:128:255
+F:3:4:8
+F:3:7:8
+
+C:255:128:0
+F:2:4:8
+F:2:6:8
+
+C:0:0:255
+F:1:2:6
+F:1:5:6
